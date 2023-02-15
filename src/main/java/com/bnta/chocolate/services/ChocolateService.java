@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.List;
 
 @Service
 public class ChocolateService {
@@ -46,4 +47,14 @@ public class ChocolateService {
     public void setChocolateList(ArrayList<Chocolate> chocolateList) {
         this.chocolateList = chocolateList;
     }
+
+    public List<Chocolate> getAllChocolates(){
+        return chocolateRepository.findAll();
+    }
+
+    public Chocolate saveChocolate(Chocolate chocolate){
+        chocolateRepository.save(chocolate);
+        return chocolate;
+    }
+
 }
