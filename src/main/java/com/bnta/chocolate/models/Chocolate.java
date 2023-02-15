@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
-//@Entity(name = "chocolates")
 @Entity( name = "chocolates")
 public class Chocolate {
 
